@@ -1,8 +1,11 @@
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.InetSocketAddress;
-import java.nio.ByteBuffer;
+import java.nio.channels.Channels;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
+import java.nio.charset.StandardCharsets;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -26,18 +29,11 @@ public class BlockingNIOServer {
             pool.submit(() -> {
                 while (sc.isConnected()) {
                     try {
-                        ByteBuffer buf = ByteBuffer.allocateDirect(80);
-                        int read = sc.read(buf);
-                        if (read == -1) {
-                            sc.close();
-                            return;
-                        }
-                        if (read > 0) {
-                            Util.transmogrify(buf);
-                            while (buf.hasRemaining()) {
-                                sc.write(buf);
-                            }
-                        }
+                        PrintWriter writer = new PrintWriter(Channels.newWriter(sc, StandardCharsets.UTF_8.name()), true);
+                        BufferedReader reader = new BufferedReader(Channels.newReader(sc, StandardCharsets.UTF_8.name()));
+
+                        String s = reader.readLine();
+                        writer.println(s.toUpperCase());
                     } catch (Exception ex) {
                         // workshop
                     }
