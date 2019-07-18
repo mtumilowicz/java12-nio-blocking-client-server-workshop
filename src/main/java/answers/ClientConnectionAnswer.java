@@ -7,26 +7,15 @@ import java.nio.channels.Channels;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
 
-/**
- * Created by mtumilowicz on 2019-07-07.
- */
-class ClientConnectionAnswer implements Runnable {
+public class ClientConnectionAnswer implements Runnable {
     private final SocketChannel client;
     private final PrintWriter writer;
     private final BufferedReader reader;
 
-    ClientConnectionAnswer(SocketChannel client) {
-        this(
-                client,
-                new PrintWriter(Channels.newWriter(client, StandardCharsets.UTF_8.name())),
-                new BufferedReader(Channels.newReader(client, StandardCharsets.UTF_8.name()))
-        );
-    }
-
-    public ClientConnectionAnswer(SocketChannel client, PrintWriter writer, BufferedReader reader) {
+    public ClientConnectionAnswer(SocketChannel client) {
         this.client = client;
-        this.writer = writer;
-        this.reader = reader;
+        this.writer = new PrintWriter(Channels.newWriter(client, StandardCharsets.UTF_8.name()), true);
+        this.reader = new BufferedReader(Channels.newReader(client, StandardCharsets.UTF_8.name()));
     }
 
     @Override
