@@ -27,7 +27,7 @@ public class SingleThreadedNIOBlockingServerAnswer {
         log("Created server socket on port " + portNumber);
 
         while (true) {
-            final var client = serverSocket.accept();
+            final var client = serverSocket.accept().socket();
             log("Accepted connection from " + client);
 
             handle(new ClientConnectionAnswer(client));

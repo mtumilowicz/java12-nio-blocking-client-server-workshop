@@ -14,6 +14,8 @@ _Reference_: https://www.amazon.com/Java-Nio-Ron-Hitchens/dp/0596002882
 * channels are a new, first-class Java I/O paradigm
 * channel is a conduit that transports data efficiently between byte buffers and the entity on the other end 
 of the channel
+    * You can think of the “buffer” as a temporary storage place
+    * “Channel” is the medium that transports bulk of data into and out of buffers and it can be viewed as an endpoint for communication. (For example if we take “SocketChannel” class, it reads from and writes to TCP sockets. But the data must be encoded in ByteBuffer objects for reading and writing.
 * channel implementations vary radically between operating systems
 * channels operate only on byte buffers
 * I/O falls into two categories: file I/O and stream I/O
@@ -32,3 +34,9 @@ workshops)
   You then flip the buffer (open the lid) and drain it (remove your receipt). You drive away and
   the next object (bank customer) is ready to repeat the process using the same carrier (Buffer)
   and tube (Channel) objects.
+* sockets - we can get the input and output streams from the socket
+    * In NIO based systems, instead of writing data onto output streams
+      and reading data from input streams, we read and write data from “buffers”
+    * 
+* `SocketChannel.socket()` - retrieves a socket associated with this channel
+* instead of asking for socket’s input and output streams, we are going to write data to the channel itself
