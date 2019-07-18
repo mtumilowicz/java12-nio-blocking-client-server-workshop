@@ -4,6 +4,7 @@ _Reference_: https://medium.com/coderscorner/tale-of-client-server-and-socket-a6
 _Reference_: https://www.amazon.com/Java-Nio-Ron-Hitchens/dp/0596002882
 
 # project description
+* please refer firstly https://github.com/mtumilowicz/java12-io-socket-client-server-workshop
 * the main goal of this project is to show how to implement blocking server using java NIO
 * on the workshop we will try to fix failing tests from `test/workshop` package by following steps and hints in
 `java/workshop` package
