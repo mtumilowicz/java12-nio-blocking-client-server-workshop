@@ -13,9 +13,16 @@ public class ClientConnectionAnswer implements Runnable {
     private final BufferedReader reader;
 
     public ClientConnectionAnswer(SocketChannel client) {
+        this(
+                client,
+                new PrintWriter(Channels.newWriter(client, StandardCharsets.UTF_8.name()), true),
+                new BufferedReader(Channels.newReader(client, StandardCharsets.UTF_8.name())));
+    }
+
+    public ClientConnectionAnswer(SocketChannel client, PrintWriter writer, BufferedReader reader) {
         this.client = client;
-        this.writer = new PrintWriter(Channels.newWriter(client, StandardCharsets.UTF_8.name()), true);
-        this.reader = new BufferedReader(Channels.newReader(client, StandardCharsets.UTF_8.name()));
+        this.writer = writer;
+        this.reader = reader;
     }
 
     @Override
