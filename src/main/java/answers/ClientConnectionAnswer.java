@@ -12,7 +12,7 @@ public class ClientConnectionAnswer implements Runnable {
     private final PrintWriter writer;
     private final BufferedReader reader;
 
-    public ClientConnectionAnswer(SocketChannel client) {
+    ClientConnectionAnswer(SocketChannel client) {
         this(
                 client,
                 new PrintWriter(Channels.newWriter(client, StandardCharsets.UTF_8.name()), true),

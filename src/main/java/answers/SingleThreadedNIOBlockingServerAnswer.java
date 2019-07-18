@@ -12,7 +12,7 @@ public class SingleThreadedNIOBlockingServerAnswer {
         this.portNumber = portNumber;
     }
 
-    SingleThreadedNIOBlockingServerAnswer() {
+    private SingleThreadedNIOBlockingServerAnswer() {
         this.portNumber = 81;
     }
     
