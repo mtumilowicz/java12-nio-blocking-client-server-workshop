@@ -11,9 +11,15 @@ _Reference_: https://www.amazon.com/Java-Nio-Ron-Hitchens/dp/0596002882
 
 # theory in a nutshell
 * Java NIO - Java New IO (not Java Non-blocking IO)
-* Channels are a new, first-class Java I/O paradigm
-* Channel is a conduit that transports data efficiently between byte buffers and the
-  entity on the other end of the channel
+* channels are a new, first-class Java I/O paradigm
+* channel is a conduit that transports data efficiently between byte buffers and the entity on the other end 
+of the channel
+* channel implementations vary radically between operating systems
+* channels operate only on byte buffers
+* I/O falls into two categories: file I/O and stream I/O
+    * so there are two types of channels: file and socket
+* socket channels can operate in nonblocking mode and are selectable (will be discussed in details in the other 
+workshops)
 * A good metaphor for a channel is a
   [pneumatic tube](https://en.wikipedia.org/wiki/Pneumatic_tube#In_money_transfer), 
   the type used at drive-up bank-teller windows. Your paycheck would be the information you're sending. 
