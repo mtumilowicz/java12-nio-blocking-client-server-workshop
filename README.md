@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/mtumilowicz/java12-nio-channel-client-server-workshop.svg?branch=master)](https://travis-ci.com/mtumilowicz/java12-nio-channel-client-server-workshop)
+
 # java12-nio-channel-client-server-workshop
 
 _Reference_: https://medium.com/coderscorner/tale-of-client-server-and-socket-a6ef54a74763  
