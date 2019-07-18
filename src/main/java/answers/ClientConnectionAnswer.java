@@ -1,3 +1,5 @@
+package answers;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,19 +16,27 @@ class ClientConnectionAnswer implements Runnable {
     private final BufferedReader reader;
 
     ClientConnectionAnswer(SocketChannel client) {
+        this(
+                client,
+                new PrintWriter(Channels.newWriter(client, StandardCharsets.UTF_8.name())),
+                new BufferedReader(Channels.newReader(client, StandardCharsets.UTF_8.name()))
+        );
+    }
+
+    public ClientConnectionAnswer(SocketChannel client, PrintWriter writer, BufferedReader reader) {
         this.client = client;
-        this.writer = new PrintWriter(Channels.newWriter(client, StandardCharsets.UTF_8.name()), true);
-        this.reader = new BufferedReader(Channels.newReader(client, StandardCharsets.UTF_8.name()));
+        this.writer = writer;
+        this.reader = reader;
     }
 
     @Override
     public void run() {
         try (client) {
             sendLine("What's your name?");
-            
+
             var name = readLine();
             sendLine("Hello, " + name);
-            
+
             log("Just said hello to:" + name);
         } catch (IOException exception) {
             // workshops

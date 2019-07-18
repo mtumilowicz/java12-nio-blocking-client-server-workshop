@@ -1,21 +1,23 @@
+package answers;
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.channels.ServerSocketChannel;
 
-public class BlockingNIOServer {
+public class SingleThreadedNIOBlockingServerAnswer {
 
     private final int portNumber;
 
-    BlockingNIOServer(int portNumber) {
+    SingleThreadedNIOBlockingServerAnswer(int portNumber) {
         this.portNumber = portNumber;
     }
 
-    BlockingNIOServer() {
+    SingleThreadedNIOBlockingServerAnswer() {
         this.portNumber = 81;
     }
     
     public static void main(String[] args) throws IOException {
-        new BlockingNIOServer().start();
+        new SingleThreadedNIOBlockingServerAnswer().start();
     }
 
     void start() throws IOException {
