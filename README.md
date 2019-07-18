@@ -45,3 +45,7 @@ workshops)
       and reading data from input streams, we read and write data from buffers
     * instead of asking for socket’s input and output streams, we are going to write data to the channel itself
 * `SocketChannel.socket()` - retrieves a socket associated with this channel
+
+# conclusions in a nutshell
+* `SocketChannel` - client side of the connection (~ `Socket` if blocking)
+* `ServerSocketChannel` - server side of the connection (~ `ServerSocket` if blocking)
