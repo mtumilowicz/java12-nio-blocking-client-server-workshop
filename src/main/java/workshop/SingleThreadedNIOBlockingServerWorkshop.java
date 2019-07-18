@@ -6,20 +6,20 @@ import java.net.ServerSocket;
 /**
  * Created by mtumilowicz on 2019-06-23.
  */
-class SingleThreadedServerWorkshop {
+class SingleThreadedNIOBlockingServerWorkshop {
 
     private final int portNumber;
 
-    SingleThreadedServerWorkshop(int portNumber) {
+    SingleThreadedNIOBlockingServerWorkshop(int portNumber) {
         this.portNumber = portNumber;
     }
 
-    private SingleThreadedServerWorkshop() {
+    private SingleThreadedNIOBlockingServerWorkshop() {
         this.portNumber = 81;
     }
 
     public static void main(String[] args) throws IOException {
-        new SingleThreadedServerWorkshop().start();
+        new SingleThreadedNIOBlockingServerWorkshop().start();
     }
 
     void start() throws IOException {
