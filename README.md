@@ -51,4 +51,4 @@ workshops)
 
 # conclusions in a nutshell
 * `SocketChannel` - client side of the connection (~ `Socket` if blocking)
-* `ServerSocketChannel` - server side of the connection (~ `ServerSocket` if blocking)
+* `ServerSocketChannel` - server side of the connection (~ `ServerSocket` if blocking) 
