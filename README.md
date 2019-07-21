@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.com/mtumilowicz/java12-nio-channel-client-server-workshop.svg?branch=master)](https://travis-ci.com/mtumilowicz/java12-nio-channel-client-server-workshop)
+[![Build Status](https://travis-ci.com/mtumilowicz/java12-nio-blocking-client-server-workshop.svg?branch=master)](https://travis-ci.com/mtumilowicz/java12-nio-blocking-client-server-workshop)
 
-# java12-nio-channel-client-server-workshop
+# java12-nio-blocking-client-server-workshop
 
 _Reference_: https://medium.com/coderscorner/tale-of-client-server-and-socket-a6ef54a74763  
 _Reference_: https://www.amazon.com/Java-Nio-Ron-Hitchens/dp/0596002882

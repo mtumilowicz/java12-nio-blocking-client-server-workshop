@@ -3,7 +3,7 @@ plugins {
     id 'groovy'
 }
 
-group 'java12-nio-channel-client-server-workshop'
+group 'java12-nio-blocking-client-server-workshop'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 12
