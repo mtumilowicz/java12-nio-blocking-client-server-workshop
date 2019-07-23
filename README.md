@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/mtumilowicz/java12-nio-channel-client-server-workshop.svg?branch=master)](https://travis-ci.com/mtumilowicz/java12-nio-channel-client-server-workshop)
+[![Build Status](https://travis-ci.com/mtumilowicz/java12-nio-blocking-client-server-workshop.svg?branch=master)](https://travis-ci.com/mtumilowicz/java12-nio-blocking-client-server-workshop)
 
 # java12-nio-blocking-client-server-workshop
 
