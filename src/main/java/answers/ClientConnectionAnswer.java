@@ -7,6 +7,9 @@ import java.nio.channels.Channels;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * Created by mtumilowicz on 2019-07-08.
+ */
 public class ClientConnectionAnswer implements Runnable {
     private final SocketChannel client;
     private final PrintWriter writer;

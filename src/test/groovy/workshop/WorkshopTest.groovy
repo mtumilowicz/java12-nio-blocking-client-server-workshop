@@ -2,6 +2,7 @@ package workshop
 
 import client.TestClient
 import spock.lang.Specification
+
 /**
  * Created by mtumilowicz on 2019-07-08.
  */

@@ -1,6 +1,7 @@
 package workshop
 
-import spock.lang.Specification 
+import spock.lang.Specification
+
 /**
  * Created by mtumilowicz on 2019-07-08.
  */

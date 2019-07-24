@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.channels.ServerSocketChannel;
 
+/**
+ * Created by mtumilowicz on 2019-07-08.
+ */
 public class SingleThreadedNIOBlockingServerAnswer {
 
     private final int portNumber;
