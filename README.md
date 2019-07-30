@@ -44,7 +44,7 @@ workshops)
     * you then flip the buffer (open the lid) and drain it (remove your receipt)
     * you drive away and the next object (bank customer) is ready to repeat the process using the same carrier (Buffer)
     and tube (Channel) objects
-* vs io.sockets - we can get the input and output streams from the socket and use them to communcation
+* vs `io.sockets`
     * in NIO based systems, instead of writing data onto output streams
       and reading data from input streams, we read and write data from buffers
     * instead of asking for socket’s input and output streams, we are going to write data to the channel itself
